@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #2f80ed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 600;
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.error {
+    background-color: rgb(241, 71, 71);
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    translate: -50% 0%;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.rules {
+    padding: 2em;
+    line-height: 3em;
+}
+
+.score {
+    padding: 2em;
+    line-height: 3em;
+    text-align: center;
+}
+
+.container-start,
+.container-score,
+.container-question {
+    width: 90%;
+    max-width: 700px;
+    border-radius: 12px;
+    padding: 2em 2em;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.questions-progress {
+    height: 5px;
+    background-color: #c0bfd2;
+    margin-top: 5px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    width: 0%;
+    background-color: #2f80ed;
+    height: 5px;
+    border-radius: 2px;
+    transition: width 0.5s;
+}
+
+.question-timer {
+    width: 6em;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #e1f5fe;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.question-text {
+    margin: 1em 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-option {
+    width: 100%;
+    background: white;
+    display: block;
+    font-size: 18px;
+    padding: 1em;
+    margin: 10px 0;
+    border: 2px solid #c0bfd2;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.btn-option:disabled {
+    cursor: not-allowed;
+}
+
+.btn-option:not(:disabled):hover {
+    border-color: #2f80ed;
+    background-color: #e1f5fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-option-incorrect {
+    border: 2px solid #eb5757;
+    background-color: #ffdde1;
+    color: #eb5757;
+}
+
+.btn-option-correct {
+    border: 2px solid #40c057;
+    background-color: #d4edda;
+    color: #40c057;
+}
+
+.btn-start,
+.btn-restart,
+.btn-next {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2f80ed;
+    padding: 10px 30px;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: end;
+}
+
+.hide {
+    display: none;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

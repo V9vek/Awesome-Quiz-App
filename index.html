@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="error hide"></div>
+
+    <section class="container-start">
+        <h1>Awesome Quiz App</h1>
+        <div class="rules">
+            <h3>Rules</h3>
+            <ul>
+                <li>This is an awesome quiz app to test your knowledge.</li>
+                <li>For each question there will be 2-4 options.</li>
+                <li>Out of those options, single option is correct.</li>
+                <li>You will be given 10 seconds for each question.</li>
+            </ul>
+        </div>
+        <button class="btn-start" onclick="onStartClicked()">START QUIZ</button>
+    </section>
+
+    <div id="loading" class="hide">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <section class="container-question">
+        <div>
+            <div class="header">
+                <div class="questions-done">2 of 3 Question</div>
+                <div class="question-timer">
+                    <img src="assets/timer.png" width="24" height="24">
+                    <span class="timer"></span>
+                </div>
+            </div>
+            
+            <div class="questions-progress">
+                <div class="progress"></div>
+            </div>
+
+            <div class="question-text">Which is the only continent in the world without a desert?</div>
+
+            <div class="question-options">
+                <button class="btn-option" onclick="onOptionClicked()">North America</button>
+                <button class="btn-option" onclick="onOptionClicked()">Asia</button>
+                <button class="btn-option" onclick="onOptionClicked()">Europe</button>
+                <button class="btn-option" onclick="onOptionClicked()">South Africa</button>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn-next" onclick="onNextClicked()">Next</button>
+        </div>
+    </section>
+
+    <section class="container-score">
+        <h1>Awesome Quiz App</h1>
+        <div class="score">
+            <!-- <h3>Your Score is :</h3> -->
+        </div>
+        <button class="btn-restart" onclick="onRestartClicked()">RESTART QUIZ</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
